@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Protected</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Enter the Secret Password</h2>
+  <input type="password" id="passwordInput" placeholder="Enter password" />
+  <button onclick="checkPassword()">Submit</button>
+  <p id="error" style="color:red;"></p>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      if (password === "singingstar") {
+        window.location.href = "private.html";
+      } else {
+        document.getElementById("error").textContent = "Wrong password.";
+      }
+    }
+  </script>
+</body>
+</html>
